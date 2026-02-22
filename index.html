@@ -4,24 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Klaus V2 – AR</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
-    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 18px; }
-    a { display:block; padding:14px 16px; border:1px solid #ddd; border-radius:12px; text-decoration:none; margin:10px 0; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 16px; }
+    model-viewer { width: 100%; height: 70vh; background:#f3f3f3; border-radius: 12px; }
   </style>
 </head>
 <body>
   <h1>Klaus V2 in AR</h1>
 
-  <!-- iPhone/iPad: Quick Look -->
-  <a rel="ar" href="nu_Klaus_V2.usdz">
-    <img src="preview.jpg" alt="iPhone/iPad: In AR öffnen" style="max-width:260px;width:70vw;border-radius:12px;border:1px solid #ddd;">
-  </a>
+  <model-viewer
+    src="nu_Klaus_V2.glb"
+    ios-src="nu_Klaus_V2.usdz"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    camera-controls
+    alt="nu Klaus V2">
+  </model-viewer>
 
-  <!-- Android: Scene Viewer -->
-  <a href="intent://arvr.google.com/scene-viewer/1.0?file=https%3A%2F%2Fklauswinkler96.github.io%2FWinkler-Klaus%2Fnu_Klaus_V2.glb&mode=ar_only#Intent;scheme=https;package=com.google.ar.core;action=android.intent.action.VIEW;end;">
-    Android: In AR öffnen
-  </a>
-
-  <p>Dann: platzieren → Foto/Screenshot machen.</p>
+  <p>Tippe auf den AR-Button → platziere Klaus → Foto/Screenshot.</p>
 </body>
 </html>
